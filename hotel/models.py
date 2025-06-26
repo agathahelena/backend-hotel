@@ -1,6 +1,6 @@
 from django.db import models
 
-class Hóspede(models.Model):
+class Hospede(models.Model):
     nome = models.CharField(max_length=50)
     cpf = models.CharField(max_length=14)
     telefone = models.CharField(max_length=19)
@@ -25,7 +25,7 @@ class Pagamento(models.Model):
     def __str__(self):
         return self.valor
 
-class FunçãoFuncionário(models.Model):
+class FuncaoFuncionario(models.Model):
     nome = models.CharField(max_length=15)
     funcionario = models.CharField(max_length=30)
 
