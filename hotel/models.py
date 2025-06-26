@@ -1,6 +1,3 @@
-
-from django.db import models
-
 from django.db import models
 
 class Reserva(models.Model):
@@ -8,11 +5,10 @@ class Reserva(models.Model):
     dataSai =  models.DateField()
     PessoasQuantidade = models.CharField(max_length=5)
 
-     def __str__(self):
-        return self.nome 
+    def __str__(self):
+        return self.PessoasQuantidade 
 
-
-class Funcionario(models.model):
+class Funcionario(models.Model):
     dataRegistro = models.DateField()
     CPF = models.CharField(max_length=11)
     cod = models.CharField(max_length=10)
@@ -23,7 +19,7 @@ class Funcionario(models.model):
     def __str__(self): 
         return self.nome
 
-class Servico(models.model):
+class Servico(models.Model):
     codServico = models.CharField(max_length=10)
     horaServico = models.TimeField(max_length=5)
     QuartoServico = models.CharField(max_length=3)
